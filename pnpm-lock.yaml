@@ -22,6 +22,7 @@ specifiers:
   next-auth: 4.20.1
   postcss: ^8.4.21
   prettier: ^2.8.6
+  prettier-plugin-organize-imports: ^3.2.2
   prettier-plugin-tailwindcss: ^0.2.6
   prisma: ^4.11.0
   react: 18.2.0
@@ -41,6 +42,7 @@ dependencies:
   '@trpc/server': 10.18.0
   next: 13.2.4_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.20.1_ld2jel3hspngo3u5lti2kgl2sq
+  prettier-plugin-organize-imports: 3.2.2_yjxfxdzwsjhh6zso5hxd2y2tpu
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   superjson: 1.12.2
@@ -59,7 +61,7 @@ devDependencies:
   eslint-config-next: 13.2.4_vwh6htx42aidho2qgfca5u5rwm
   postcss: 8.4.21
   prettier: 2.8.7
-  prettier-plugin-tailwindcss: 0.2.6_prettier@2.8.7
+  prettier-plugin-tailwindcss: 0.2.6_hy6c6t4j6tirrvnef42jy7yzfe
   prisma: 4.12.0
   tailwindcss: 3.3.1_postcss@8.4.21
   typescript: 5.0.3
@@ -2354,7 +2356,23 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-tailwindcss/0.2.6_prettier@2.8.7:
+  /prettier-plugin-organize-imports/3.2.2_yjxfxdzwsjhh6zso5hxd2y2tpu:
+    resolution: {integrity: sha512-e97lE6odGSiHonHJMTYC0q0iLXQyw0u5z/PJpvP/3vRy6/Zi9kLBwFAbEGjDzIowpjQv8b+J04PDamoUSQbzGA==}
+    peerDependencies:
+      '@volar/vue-language-plugin-pug': ^1.0.4
+      '@volar/vue-typescript': ^1.0.4
+      prettier: '>=2.0'
+      typescript: '>=2.9'
+    peerDependenciesMeta:
+      '@volar/vue-language-plugin-pug':
+        optional: true
+      '@volar/vue-typescript':
+        optional: true
+    dependencies:
+      prettier: 2.8.7
+      typescript: 5.0.3
+
+  /prettier-plugin-tailwindcss/0.2.6_hy6c6t4j6tirrvnef42jy7yzfe:
     resolution: {integrity: sha512-F+7XCl9RLF/LPrGdUMHWpsT6TM31JraonAUyE6eBmpqymFvDwyl0ETHsKFHP1NG+sEfv8bmKqnTxEbWQbHPlBA==}
     engines: {node: '>=12.17.0'}
     peerDependencies:
@@ -2407,13 +2425,13 @@ packages:
         optional: true
     dependencies:
       prettier: 2.8.7
+      prettier-plugin-organize-imports: 3.2.2_yjxfxdzwsjhh6zso5hxd2y2tpu
     dev: true
 
   /prettier/2.8.7:
     resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
-    dev: true
 
   /pretty-format/3.8.0:
     resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
@@ -2849,7 +2867,6 @@ packages:
     resolution: {integrity: sha512-xv8mOEDnigb/tN9PSMTwSEqAnUvkoXMQlicOb0IUVDBSQCgBSaAAROUZYy2IcUy5qU6XajK5jjjO7TMWqBTKZA==}
     engines: {node: '>=12.20'}
     hasBin: true
-    dev: true
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
