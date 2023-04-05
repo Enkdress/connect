@@ -14,7 +14,6 @@ const Home: NextPage = () => {
       utils.post.getAll.invalidate().catch((e) => console.error(e))
     },
   })
-  console.log({ session })
   return (
     <>
       {session.status === "unauthenticated" && <Landing />}
