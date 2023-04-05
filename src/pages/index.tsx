@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   const { data: posts } = api.post.getAll.useQuery()
   const { mutate: createPost } = api.post.create.useMutation({
     onSuccess() {
-      utils.post.getAll.invalidate()
+      utils.post.getAll.invalidate().catch((e) => console.error(e))
     },
   })
   return (
