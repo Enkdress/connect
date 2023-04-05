@@ -26,7 +26,7 @@ const Home: NextPage = () => {
               <h1>{post.text}</h1>
             </div>
           ))}
-          <button onClick={() => signOut()}>Sign out</button>
+          <button onClick={() => void signOut()}>Sign out</button>
         </>
       )}
     </>

@@ -6,7 +6,7 @@ const Landing = () => {
     <header className="bg-background">
       <nav className="flex container justify-between mx-auto py-5 px-5 xl:px-38">
         <Image src="/black_logo.svg" alt="logo full size" width={220} height={220} />
-        <button className="bg-primary rounded-md w-20 text-white" onClick={() => signIn()}>
+        <button className="bg-primary rounded-md w-20 text-white" onClick={() => void signIn()}>
           Sign in
         </button>
       </nav>
