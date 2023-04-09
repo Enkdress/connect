@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  @apply text-gray-800;
+}
+
+#__next {
+  height: 100vh;
+  @apply bg-blue-950;
+}
