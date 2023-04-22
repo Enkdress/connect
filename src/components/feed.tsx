@@ -40,10 +40,10 @@ const Feed = () => {
   }
 
   return (
-    <main className="bg-dark-bg mx-auto flex h-full max-w-4xl flex-col">
+    <main className="flex flex-col mx-auto max-w-4xl h-full bg-dark-bg">
       <section
         id="posting_section"
-        className="mx-5 mt-5 flex items-start gap-5 rounded-md bg-black3 p-5"
+        className="flex gap-5 items-start p-5 mx-5 mt-5 rounded-md bg-black3"
       >
         <Image
           src={user.image as string}

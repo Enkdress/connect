@@ -14,16 +14,16 @@ const PostInput = () => {
   })
 
   return (
-    <div className="flex text-white-text w-full flex-col gap-3">
+    <div className="flex flex-col gap-3 w-full text-white-text">
       <input
         placeholder="Share something with the community"
-        className="w-full rounded-md border-none p-4 text-white-text outline-none focus:ring-1 focus:ring-primary bg-black2"
+        className="p-4 w-full rounded-md border-none outline-none focus:ring-1 bg-black2 text-white-text focus:ring-primary"
         value={postContent}
         onChange={({ target }) => setPostContent(target.value)}
       />
       <Transition
         show={postContent.length > 3}
-        className="flex w-full justify-end"
+        className="flex justify-end w-full"
         enter="transition duration-300 ease-out transform"
         enterFrom="-translate-y-10"
         enterTo="translate-y-0"
@@ -33,7 +33,7 @@ const PostInput = () => {
       >
         <button
           onClick={() => createPost({ postContent })}
-          className="w-full rounded-md bg-primary text-black2 px-4 py-2 hover:bg-primary-hover md:w-52"
+          className="py-2 px-4 w-full rounded-md md:w-52 bg-primary text-black2 hover:bg-primary-hover"
         >
           Share
         </button>

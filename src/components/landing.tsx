@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Landing = () => {
   return (
     <header className="bg-background">
-      <nav className="xl:px-38 container mx-auto flex justify-between px-5 py-5">
+      <nav className="container flex justify-between py-5 px-5 mx-auto xl:px-38">
         <Image
           src="/black_logo.svg"
           alt="logo full size"
@@ -12,7 +12,7 @@ const Landing = () => {
           height={220}
         />
         <button
-          className="w-20 rounded-md bg-primary text-white"
+          className="w-20 text-white rounded-md bg-primary"
           onClick={() => void signIn()}
         >
           Sign in
