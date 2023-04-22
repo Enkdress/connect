@@ -1,7 +1,34 @@
 import { api } from '@/utils/api'
+import { Post, User } from '@prisma/client'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
+import { FunctionComponent } from 'react'
 import PostInput from './postInput'
+
+const Post: FunctionComponent<{ post: Post & { author: User } }> = ({
+  post
+}) => {
+  return (
+    <li key={post.id}>
+      <div className="flex gap-2 items-start p-5 mx-5 text-white rounded-md bg-black3">
+        <Image
+          src={post.author.image as string}
+          alt="profile_pic"
+          height={42}
+          width={42}
+          className="flex-none rounded-full"
+        />
+        <div className="flex flex-col gap-1 flex-2 grow">
+          <span className="font-semibold">{post.author.name}</span>
+          <p className="font-light">{post.text}</p>
+        </div>
+        <p className="flex-none font-extralight">
+          {post.createdAt.toLocaleString().split(',')[0]}
+        </p>
+      </div>
+    </li>
+  )
+}
 
 const Feed = () => {
   const session = useSession()
@@ -29,29 +56,15 @@ const Feed = () => {
       </section>
 
       <section id="posts_section">
-        <ul className="mt-10 flex flex-col gap-5">
-          {posts &&
-            posts.map(post => (
-              <li key={post.id}>
-                <div className="mx-5 flex items-start gap-2 rounded-md bg-black3 p-5 text-white">
-                  <Image
-                    src={post.author.image as string}
-                    alt="profile_pic"
-                    height={42}
-                    width={42}
-                    className="flex-none rounded-full"
-                  />
-                  <div className="flex-2 flex grow flex-col gap-1">
-                    <span className="font-semibold">{post.author.name}</span>
-                    <p className="font-light">{post.text}</p>
-                  </div>
-                  <p className="flex-none font-extralight">
-                    {post.createdAt.toLocaleString().split(',')[0]}
-                  </p>
-                </div>
-              </li>
-            ))}
-        </ul>
+        {posts && posts.length > 0 ? (
+          <ul className="flex flex-col gap-5 mt-10">
+            {posts && posts.map(post => <Post post={post} />)}
+          </ul>
+        ) : (
+          <h1 className="py-3 my-10 mx-5 text-xl text-center rounded-md bg-black2 text-white-text">
+            Share something with us...
+          </h1>
+        )}
       </section>
     </main>
   )
