@@ -1,5 +1,5 @@
 import { api } from '@/utils/api'
-import { Post, User } from '@prisma/client'
+import type { Post, User } from '@prisma/client'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
 import { FunctionComponent } from 'react'
@@ -58,7 +58,7 @@ const Feed = () => {
       <section id="posts_section">
         {posts && posts.length > 0 ? (
           <ul className="flex flex-col gap-5 mt-10">
-            {posts && posts.map(post => <Post post={post} />)}
+            {posts && posts.map(post => <Post post={post} key={post.id} />)}
           </ul>
         ) : (
           <h1 className="py-3 my-10 mx-5 text-xl text-center rounded-md bg-black2 text-white-text">
