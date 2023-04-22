@@ -14,10 +14,10 @@ const PostInput = () => {
   })
 
   return (
-    <div className="flex w-full flex-col gap-3">
+    <div className="flex text-white-text w-full flex-col gap-3">
       <input
         placeholder="Share something with the community"
-        className="w-full rounded-sm border-none px-4 py-2 outline-none focus:ring-1 focus:ring-primary"
+        className="w-full rounded-md border-none p-4 text-white-text outline-none focus:ring-1 focus:ring-primary bg-black2"
         value={postContent}
         onChange={({ target }) => setPostContent(target.value)}
       />
@@ -33,7 +33,7 @@ const PostInput = () => {
       >
         <button
           onClick={() => createPost({ postContent })}
-          className="w-full rounded-sm bg-primary px-4 py-2 text-white hover:bg-primary/95 md:w-52"
+          className="w-full rounded-md bg-primary text-black2 px-4 py-2 hover:bg-primary-hover md:w-52"
         >
           Share
         </button>

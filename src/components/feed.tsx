@@ -13,10 +13,10 @@ const Feed = () => {
   }
 
   return (
-    <main className="mx-auto flex h-full max-w-4xl flex-col bg-blue-950 ring-1 ring-gray-300">
+    <main className="bg-dark-bg mx-auto flex h-full max-w-4xl flex-col">
       <section
         id="posting_section"
-        className="mt-5 flex items-start gap-5 px-5 py-2"
+        className="mx-5 mt-5 flex items-start gap-5 rounded-md bg-black3 p-5"
       >
         <Image
           src={user.image as string}
@@ -29,11 +29,11 @@ const Feed = () => {
       </section>
 
       <section id="posts_section">
-        <ul className="mt-10 flex flex-col">
+        <ul className="mt-10 flex flex-col gap-5">
           {posts &&
             posts.map(post => (
               <li key={post.id}>
-                <div className="flex items-start gap-2 border-t border-gray-50 p-5 text-white">
+                <div className="mx-5 flex items-start gap-2 rounded-md bg-black3 p-5 text-white">
                   <Image
                     src={post.author.image as string}
                     alt="profile_pic"

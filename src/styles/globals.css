@@ -9,5 +9,5 @@ body {
 
 #__next {
   height: 100vh;
-  @apply bg-blue-950;
+  @apply bg-black1;
 }

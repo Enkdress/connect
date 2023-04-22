@@ -5,8 +5,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#ff325d",
-        background: "#faf8ff",
+        primary: "#f3f050",
+        black1: "#1a1a1a",
+        black2: "#222222",
+        black3: "#282828",
+        "primary-hover": "#F4F39A",
+        "white-text": "#f1f1f1"
       }
     },
   },
