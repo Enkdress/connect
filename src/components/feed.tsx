@@ -2,7 +2,7 @@ import { api } from '@/utils/api'
 import type { Post as PostType, User as UserType } from '@prisma/client'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
-import { FunctionComponent } from 'react'
+import type { FunctionComponent } from 'react'
 import PostInput from './postInput'
 
 const Post: FunctionComponent<{ post: PostType & { author: UserType } }> = ({
