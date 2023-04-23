@@ -1,7 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn format-check
-pnpm rustywind --check-formatted .
+pnpm format-check
 pnpm lint --max-warnings 0
 pnpm tsc --noEmit

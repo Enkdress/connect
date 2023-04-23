@@ -9,7 +9,7 @@
     "lint": "next lint",
     "start": "next start",
     "format-check": "prettier --check \"{,!(node_modules|.next)/**/}*.[jt]s(x)?\"",
-    "format": "prettier --write \"{,!(node_modules|.next)/**/}*.[jt]s(x)?\";yarn rustywind --write .",
+    "format": "prettier --write \"{,!(node_modules|.next)/**/}*.[jt]s(x)?\"",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -27,7 +27,6 @@
     "prettier-plugin-organize-imports": "^3.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "rustywind": "^0.15.3",
     "superjson": "1.12.2",
     "zod": "^3.21.4"
   },

@@ -10,15 +10,15 @@ const Post: FunctionComponent<{ post: PostType & { author: UserType } }> = ({
 }) => {
   return (
     <li key={post.id}>
-      <div className="flex gap-2 items-start p-5 mx-5 text-white rounded-md bg-black3">
+      <div className="mx-5 flex items-start gap-2 rounded-md bg-black3 p-5 text-white">
         <Image
           src={post.author.image as string}
           alt="profile_pic"
           height={42}
           width={42}
-          className="flex-none rounded-full ring-2 ring-offset-2 ring-primary ring-offset-black3"
+          className="flex-none rounded-full ring-2 ring-primary ring-offset-2 ring-offset-black3"
         />
-        <div className="flex flex-col gap-1 flex-2 grow">
+        <div className="flex-2 flex grow flex-col gap-1">
           <span className="font-semibold">{post.author.name}</span>
           <p className="font-light">{post.text}</p>
         </div>
@@ -40,28 +40,28 @@ const Feed = () => {
   }
 
   return (
-    <main className="flex flex-col col-start-4 col-end-10 mx-auto w-full max-w-4xl h-full bg-dark-bg">
+    <main className="bg-dark-bg col-start-4 col-end-10 mx-auto flex h-full w-full max-w-4xl flex-col">
       <section
         id="posting_section"
-        className="flex gap-5 items-start p-5 mx-5 mt-5 rounded-md bg-black3"
+        className="mx-5 mt-5 flex items-start gap-5 rounded-md bg-black3 p-5"
       >
         <Image
           src={user.image as string}
           alt="profile_pic"
           height={52}
           width={52}
-          className="flex-none rounded-full ring-2 ring-offset-2 ring-primary ring-offset-black3"
+          className="flex-none rounded-full ring-2 ring-primary ring-offset-2 ring-offset-black3"
         />
         <PostInput />
       </section>
 
       <section id="posts_section">
         {posts && posts.length > 0 ? (
-          <ul className="flex flex-col gap-5 mt-10">
+          <ul className="mt-10 flex flex-col gap-5">
             {posts && posts.map(post => <Post post={post} key={post.id} />)}
           </ul>
         ) : (
-          <h1 className="py-3 my-10 mx-5 text-xl text-center rounded-md bg-black2 text-white-text">
+          <h1 className="mx-5 my-10 rounded-md bg-black2 py-3 text-center text-xl text-white-text">
             Share something with us...
           </h1>
         )}
