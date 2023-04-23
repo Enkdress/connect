@@ -10,7 +10,7 @@ const Post: FunctionComponent<{ post: PostType & { author: UserType } }> = ({
 }) => {
   return (
     <li key={post.id}>
-      <div className="mx-5 flex items-start gap-2 rounded-md bg-black3 p-5 text-white">
+      <div className="mx-5 flex items-start gap-2 rounded-md bg-black3 p-5 text-white sm:mx-0">
         <Image
           src={post.author.image as string}
           alt="profile_pic"
@@ -40,10 +40,10 @@ const Feed = () => {
   }
 
   return (
-    <main className="bg-dark-bg col-start-4 col-end-10 mx-auto flex h-full w-full max-w-4xl flex-col">
+    <main className="bg-dark-bg col-start-1 col-end-13 mx-auto flex h-full w-full max-w-4xl flex-col sm:col-start-6 sm:col-end-12 md:col-start-5">
       <section
         id="posting_section"
-        className="mx-5 mt-5 flex items-start gap-5 rounded-md bg-black3 p-5"
+        className="mx-5 mt-5 flex items-start gap-5 rounded-md bg-black3 p-5 sm:mx-0"
       >
         <Image
           src={user.image as string}
