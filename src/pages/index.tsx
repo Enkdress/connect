@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             className="flex-none rounded-full ring-2 ring-primary ring-offset-2 ring-offset-black3"
           />
           <button
-            onClick={() => signOut()}
+            onClick={() => void signOut()}
             className="w-full rounded-md bg-black1 px-4 py-2 text-white-text outline-none hover:border hover:border-primary hover:bg-black1/70 focus:ring-1 focus:ring-primary"
           >
             Sign Out
